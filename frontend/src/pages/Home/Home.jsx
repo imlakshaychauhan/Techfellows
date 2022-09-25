@@ -7,7 +7,7 @@ import Button from '../../components/shared/Button/Button'
 const Home = () => {
   const navigate = useNavigate();
   const startRegister = () => {
-      navigate('/register');
+      navigate('/authenticate');
   }
 
   return (

@@ -8,13 +8,14 @@ const Navigation = () => {
     color: "#fff",
     fontWeight: "bold",
     fontSize: "22px",
+    width: "fit-content",
     display: "flex",
     alignItems: "center",
     textDecoration: "underline"
   };
 
   const logoText =  {
-    marginLeft: "10px"
+    marginLeft: "10px",
   };
 
   return (

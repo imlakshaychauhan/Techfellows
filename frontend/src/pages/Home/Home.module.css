@@ -13,9 +13,11 @@
 }
 .alreadyregistered {
     color: #0077FF;
+    letter-spacing: 0.5px;
 }
 .signintext {
     color: #0077FF;
     font-weight: bold;
     text-decoration: none;
+    letter-spacing: 1px;
 }

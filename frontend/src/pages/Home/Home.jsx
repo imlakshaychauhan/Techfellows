@@ -16,7 +16,7 @@ const Home = () => {
           <p className={styles.paragraph}>
           Just Register or Login yourself, Create or Join a room, Talk while doing Coding in an Integrated Editor with your Techie fellows :)
           </p>
-          <Button onClick={startRegister} text="Register Yourself" />
+          <Button onClick={startRegister} text="Register Yourself" arrow="true" />
           <div>
             <span className={styles.alreadyregistered}> Already Registered? </span>
             <Link to = "/login" className={styles.signintext} >Sign In</Link>

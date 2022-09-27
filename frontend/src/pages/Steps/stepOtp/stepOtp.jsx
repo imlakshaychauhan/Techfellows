@@ -1,12 +1,12 @@
 import React from 'react'
 
-const stepOtp = ({Gonext}) => {
+const StepOtp = ({Gonext}) => {
   return (
     <>
-    <div>stepOtp</div>
+    <div>StepOtp</div>
     <button onClick={Gonext} >Next</button>
     </>
   )
 }
 
-export default stepOtp
+export default StepOtp;

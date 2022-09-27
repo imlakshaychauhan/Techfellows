@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import stepPhoneEmail from '../Steps/stepPhoneEmail/StepPhoneEmail'
-import stepOtp from '../Steps/stepOtp/stepOtp'
+import StepOtp from '../Steps/stepOtp/StepOtp'
 
 const steps = {
     1: stepPhoneEmail,
-    2: stepOtp
+    2: StepOtp
 }
 
 const Authenticate = () => {
     const [step, setStep] = useState(1);
     const Step = steps[step];
-    const Gonext = () => setStep(step + 1);
+    const gonext = () => setStep(step + 1);
     
     return (
-        <Step Gonext={Gonext} />
+        <Step gonext={gonext} />
     )
 }
 

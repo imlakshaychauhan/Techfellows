@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Phone from "./Phone/Phone";
 import Email from "./Email/Email";
 import styles from "./StepPhoneEmail.module.css";
-import Button from "../../../components/shared/Button/Button";
 import { Link } from "react-router-dom";
 
 const phoneEmailMap = {
@@ -17,7 +16,7 @@ const StepPhoneEmail = ({ gonext }) => {
   return (
     <>
       <div className={styles.cardWrapper}>
-        <Component />
+        <Component onNext={gonext} />
         <div className={styles.buttonWrap}>
           {type === "phone" ? (
             <Link onClick={() => setType("email")} className={styles.signintext} >Use Email Address to authenticate</Link>

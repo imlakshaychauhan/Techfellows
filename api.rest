@@ -4,3 +4,14 @@ Content-Type: application/json
 {
     "phone": "+91 85270 09510"
 }
+
+###
+
+POST http://localhost:8000/api/verify-otp HTTP/1.1
+Content-Type: application/json
+
+{
+    "phone": "+91 85270 09510",
+    "otp": 2559,
+    "hash": "33078c0807d622ae716d4934d42bcbf225fab4dcace59b29f5c76e2dee9c94af.1664980014273"
+}

@@ -4,6 +4,12 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 const router = require('./routes');
 const DbConnect = require("./database");
+const cors = require('cors');
+
+const corsOption = {
+    origin: ['http://localhost:3000'],
+};
+app.use(cors(corsOption));
 
 DbConnect();
 app.use(express.json());

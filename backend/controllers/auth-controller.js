@@ -6,8 +6,9 @@ const tokenService = require("../services/token-service");
 class AuthController {
     async sendOtp(req, res) {
         const { phone } = req.body;
+        // const phone = 951754874;
         if(!phone)
-            res.status(400).json({message: "Phone Field is required"});
+            return res.status(400).json({message: "Phone Field is required"});
 
         // getting random 4 digit otp
         const otp = await otpService.generateOtp();
@@ -20,14 +21,15 @@ class AuthController {
 
         // sending OTP
         try {
-            await otpService.sendBySms(phone, otp);
+            // await otpService.sendBySms(phone, otp);
             return res.json({
                 hash: `${hash}.${expires}`,
                 phone,
+                otp
             })
         } catch(err) {
             console.log(err);
-            res.status(400).json({message: "message sending failed"})
+            return res.status(400).json({message: "message sending failed"})
         }
     }
     async verifyOtp(req, res) {
